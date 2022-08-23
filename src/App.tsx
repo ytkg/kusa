@@ -40,7 +40,7 @@ function App() {
                       </div>
                     </td>
                     <td><a className="App-link" href={`https://github.com/${username}`} target="_blank">{username}</a></td>
-                    <td><img src={`http://ghchart.rshah.org/${username}`} alt={`${username}'s Github chart`} /></td>
+                    <td><img src={`https://ghchart.rshah.org/${username}`} alt={`${username}'s Github chart`} /></td>
                   </tr>
                 )
               })}
