@@ -1,14 +1,7 @@
 import './App.css'
 
 function App() {
-  const users = [
-    { name: "ytkg", avater: "https://avatars.githubusercontent.com/u/12048864?v=4" },
-    { name: "swfz", avater: "https://avatars.githubusercontent.com/u/4104038?v=4" },
-    { name: "kosnu", avater: "https://avatars.githubusercontent.com/u/45652024?v=4" },
-    { name: "luvsic-pt3", avater: "https://avatars.githubusercontent.com/u/97280024?v=4" },
-    { name: "ruritoBlogger", avater: "https://avatars.githubusercontent.com/u/40134104?v=4" },
-    { name: "umetsu", avater: "https://avatars.githubusercontent.com/u/4004120?v=4" },
-  ];
+  const usernames = ["ytkg", "swfz", "kosnu", "luvsic-pt3", "ruritoBlogger", "umetsu"]
 
   return (
     <div className="App">
@@ -23,18 +16,18 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {users.map((user) => {
+              {usernames.map((username) => {
                 return (
                   <tr>
                     <td>
                       <div className="avatar">
                         <div className="w-12 rounded-full">
-                          <img src={user.avater} alt={`${user.name}'s Github chart`} />
+                          <img src={`https://github.com/${username}.png`} alt={`${username}'s Picture`} />
                         </div>
                       </div>
                     </td>
-                    <td><a className="App-link" href={`https://github.com/${user.name}`} target="_blank">{user.name}</a></td>
-                    <td><img src={`http://ghchart.rshah.org/${user.name}`} alt={`${user.name}'s Github chart`} /></td>
+                    <td><a className="App-link" href={`https://github.com/${username}`} target="_blank">{username}</a></td>
+                    <td><img src={`http://ghchart.rshah.org/${username}`} alt={`${username}'s Github chart`} /></td>
                   </tr>
                 )
               })}
