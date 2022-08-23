@@ -1,7 +1,20 @@
 import './App.css'
 
-function App() {
+const fetchUsernames = () => {
   const usernames = ["ytkg", "swfz", "kosnu", "luvsic-pt3", "ruritoBlogger", "umetsu"]
+  const q = window.location.pathname.replace('/', '')
+
+  if (q == '') { return usernames }
+
+  try {
+    return atob(q).split(',')
+  } catch {
+    return usernames
+  }
+}
+
+function App() {
+  const usernames = fetchUsernames()
 
   return (
     <div className="App">
